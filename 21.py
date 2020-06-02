@@ -1,11 +1,3 @@
-"""
-
-int+int<=21
-funcion ganar
-
-
-"""
-
 from random import shuffle
 
 """_________________________________________________________________"""
@@ -100,24 +92,23 @@ def jugar(mazo, jugador, repartidor,ini):
             
 
             if(valor_mano_recargado(jugador) == 21):
-                print("sopas1")
+                
                 print("conseguiste 21")
 
                 jugar(mazo[1:], jugador, repartidor, 1)
 
             elif(valor_mano_recargado(jugador) >= 21):
-                print("sopas2")
+                
                 print("te pasaste de 21")
     
                 jugar(mazo[1:], jugador, repartidor, 1)
                 
             elif(valor_mano_recargado(jugador) <= 21):
-                print("sopas3")                    
+                
                 ini = input("Quieres otra carta (0): ")
                 
                 if((int(ini) == 0) and (len(mazo) > 2)):
-                    print("sopas")
-    
+
                     jugar(mazo[1:], jugador+[mazo[0]], repartidor, 0)
 
 
